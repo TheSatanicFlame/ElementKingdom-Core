@@ -1,0 +1,11 @@
+name: ElementKingdom-Core
+version: '${project.version}'
+main: me.thesatanicflame.elementkingdomcore.Main
+api-version: 1.16
+depend: [ HeadDatabase ]
+authors: [ TheSatanicFlame, bakjekwark075 ]
+description: Core plugin voor Element Kingdom!
+website: https://thevalleymc.com
+commands:
+  setnation:
+
