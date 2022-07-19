@@ -1,5 +1,6 @@
 package me.thesatanicflame.elementkingdomcore;
 
+import me.thesatanicflame.elementkingdomcore.commands.ReloadCommand;
 import me.thesatanicflame.elementkingdomcore.commands.SetNationCommand;
 import me.thesatanicflame.elementkingdomcore.events.KingdomSorter;
 import me.thesatanicflame.elementkingdomcore.menuHandlers.setNationHandler;
@@ -14,6 +15,8 @@ public final class Main extends JavaPlugin {
         Bukkit.getPluginManager().registerEvents(new KingdomSorter(), this);
         Bukkit.getPluginManager().registerEvents(new setNationHandler(), this);
         getCommand("setnation").setExecutor(new SetNationCommand());
+        getCommand("ekdreload").setExecutor(new ReloadCommand());
+
 
 
     }

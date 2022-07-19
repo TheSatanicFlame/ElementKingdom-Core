@@ -22,38 +22,38 @@ public class SetNationCommand implements CommandExecutor {
             if (p.hasPermission("elementkingdom.setnation")){
                 if (args.length == 1){
                     //Maak inv aan voor het selecteren van de nation.\
-                    Inventory inv = Bukkit.createInventory(p, 27, "Verander de nation");
+                    Inventory inv = Bukkit.createInventory(p, 36, ChatColor.of("#121212") + "Change the nation!");
                     //Makes items for in the inventory
                     ItemStack player = new ItemStack(Material.PLAYER_HEAD);
                     SkullMeta playermeta = (SkullMeta) player.getItemMeta();
                     playermeta.setOwningPlayer(Bukkit.getOfflinePlayer(args[0]));
-                    playermeta.setDisplayName(ChatColor.WHITE + args[0]);
+                    playermeta.setDisplayName(args[0]);
                     player.setItemMeta(playermeta);
 
 
 
                     ItemStack aarderijk = hdbapi.getItemHead("14230");
                     ItemMeta aarderijkMeta = aarderijk.getItemMeta();
-                    aarderijkMeta.setDisplayName(ChatColor.GREEN + "Aarderijk");
+                    aarderijkMeta.setDisplayName(ChatColor.GREEN + "Earth Kingdom");
                     aarderijk.setItemMeta(aarderijkMeta);
                     ItemStack waterstam = hdbapi.getItemHead("39387");
                     ItemMeta waterstamMeta = waterstam.getItemMeta();
-                    waterstamMeta.setDisplayName(ChatColor.AQUA + "Waterstam");
+                    waterstamMeta.setDisplayName(ChatColor.AQUA + "Water Tribe");
                     waterstam.setItemMeta(waterstamMeta);
                     ItemStack Luchtrijk = hdbapi.getItemHead("39383");
                     ItemMeta LuchtrijkMeta = Luchtrijk.getItemMeta();
-                    LuchtrijkMeta.setDisplayName(ChatColor.GRAY + "Luchtrijk");
+                    LuchtrijkMeta.setDisplayName(ChatColor.GRAY + "Air Nation");
                     Luchtrijk.setItemMeta(LuchtrijkMeta);
                     ItemStack Vuurnatie = hdbapi.getItemHead("40501");
                     ItemMeta VuurnatieMeta = Vuurnatie.getItemMeta();
-                    VuurnatieMeta.setDisplayName(ChatColor.RED + "Vuurnatie");
+                    VuurnatieMeta.setDisplayName(ChatColor.RED + "Fire Nation");
                     Vuurnatie.setItemMeta(VuurnatieMeta);
 
                     //Sets items on slots
-                    inv.setItem(10, aarderijk);
-                    inv.setItem(12, waterstam);
-                    inv.setItem(14, Luchtrijk);
-                    inv.setItem(16, Vuurnatie);
+                    inv.setItem(19, aarderijk);
+                    inv.setItem(21, waterstam);
+                    inv.setItem(23, Luchtrijk);
+                    inv.setItem(25, Vuurnatie);
                     inv.setItem(4, player);
 
                     p.openInventory(inv);

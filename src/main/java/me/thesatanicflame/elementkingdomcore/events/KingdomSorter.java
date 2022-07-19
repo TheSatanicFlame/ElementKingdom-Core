@@ -21,42 +21,45 @@ public class KingdomSorter implements Listener {
             switch (nationnumber){
                 case 1:
                 case 5:
-                    p.sendMessage(ChatColor.GREEN + "U bent ingedeeld in het Aarderijk!");
-                    String command = "k setkingdom " + p.getName() + " Aarderijk";
+                    p.sendMessage(ChatColor.GREEN + "You've been sorted into the Earth Kingdom!");
+                    String command = "k setkingdom " + p.getName() + " earthkingdom";
                     Bukkit.dispatchCommand(console, command);
-                    command = "bending choose" + p.getName() + " Earth";
+
                     if (bender == 3){
-                        p.sendMessage("U bent een Earthbender!");
+                        command = "b choose" + " Earth " + p.getName();
+                        p.sendMessage(ChatColor.GREEN + "You've been born with the power of Earthbending!");
                         Bukkit.dispatchCommand(console, command);
                     }
                     break;
                 case 2:
                 case 6:
-                    p.sendMessage(ChatColor.AQUA + "U bent ingedeeld in de Waterstam!");
-                    command = "k setkingdom " + p.getName() + " Waterstam";
+                    p.sendMessage(ChatColor.AQUA + "You've been sorted into the Water Tribe");
+                    command = "k setkingdom "  + p.getName() + " watertribe";
                     Bukkit.dispatchCommand(console, command);
-                    command = "bending choose" + p.getName() + " Water";
+
                     if (bender == 3){
-                        p.sendMessage("U bent een Waterbender!");
+                        command = "b choose" + " Water " + p.getName();
+                        p.sendMessage(ChatColor.AQUA + "You've been born with the power of Waterbending!");
                         Bukkit.dispatchCommand(console, command);
                     }
                     break;
                 case 3:
-                    p.sendMessage(ChatColor.GRAY + "U bent ingedeeld in het Luchtrijk!");
-                    command = "k setkingdom " + p.getName() + " Luchtrijk";
+                    p.sendMessage(ChatColor.GRAY + "You've been sorted into the Air Nation!");
+                    command = "k setkingdom " + p.getName() + " airnation";
                     Bukkit.dispatchCommand(console, command);
-                    command = "bending choose" + p.getName() + " Air";
-                    p.sendMessage("U bent een Airbender!");
+                    command = "b choose" + " Air "  + p.getName();
+                    p.sendMessage(ChatColor.GRAY + "You've been born with the power of Airbending!");
                     Bukkit.dispatchCommand(console, command);
                     break;
                 case 4:
                 case 7:
-                    p.sendMessage(ChatColor.RED + "U bent ingedeeld in het Vuurnatie!");
+                    p.sendMessage(ChatColor.RED + "You've been sorted into the Fire Nation!");
                     command = "k setkingdom " + p.getName() + " Vuurnatie";
                     Bukkit.dispatchCommand(console, command);
-                    command = "bending choose" + p.getName() + " Fire";
+
                     if (bender == 3){
-                        p.sendMessage("U bent een Firebender!");
+                        command = "b choose" + " Fire " + p.getName().toString();
+                        p.sendMessage(ChatColor.RED + "You've been born with the power of Firebending!");
                         Bukkit.dispatchCommand(console, command);
                     }
                     break;
