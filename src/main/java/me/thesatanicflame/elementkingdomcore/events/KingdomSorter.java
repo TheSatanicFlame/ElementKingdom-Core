@@ -15,20 +15,26 @@ public class KingdomSorter implements Listener {
         Player p = e.getPlayer();
         if (!p.hasPlayedBefore()){
             ConsoleCommandSender console = Bukkit.getServer().getConsoleSender();
-            int nationnumber = (int) (Math.random() * 7) + 1;
+            int nationnumber = (int) (Math.random() * 8) + 1;
             int bender = (int) (Math.random() * 3) + 1;
+
 
             switch (nationnumber){
                 case 1:
                 case 5:
+                case 8:
                     p.sendMessage(ChatColor.GREEN + "You've been sorted into the Earth Kingdom!");
                     String command = "k setkingdom " + p.getName() + " earthkingdom";
                     Bukkit.dispatchCommand(console, command);
+                    command = "lp user " + p.getName() + " parent add earth";
+                    Bukkit.dispatchCommand(console, command);
+
 
                     if (bender == 3){
                         command = "b choose" + " Earth " + p.getName();
                         p.sendMessage(ChatColor.GREEN + "You've been born with the power of Earthbending!");
                         Bukkit.dispatchCommand(console, command);
+
                     }
                     break;
                 case 2:
@@ -36,6 +42,7 @@ public class KingdomSorter implements Listener {
                     p.sendMessage(ChatColor.AQUA + "You've been sorted into the Water Tribe");
                     command = "k setkingdom "  + p.getName() + " watertribe";
                     Bukkit.dispatchCommand(console, command);
+                    command = "lp user " + p.getName() + " parent add water";
 
                     if (bender == 3){
                         command = "b choose" + " Water " + p.getName();
@@ -47,14 +54,19 @@ public class KingdomSorter implements Listener {
                     p.sendMessage(ChatColor.GRAY + "You've been sorted into the Air Nation!");
                     command = "k setkingdom " + p.getName() + " airnation";
                     Bukkit.dispatchCommand(console, command);
+                    command = "lp user " + p.getName() + " parent add air";
+                    Bukkit.dispatchCommand(console, command);
                     command = "b choose" + " Air "  + p.getName();
                     p.sendMessage(ChatColor.GRAY + "You've been born with the power of Airbending!");
                     Bukkit.dispatchCommand(console, command);
+
                     break;
                 case 4:
                 case 7:
                     p.sendMessage(ChatColor.RED + "You've been sorted into the Fire Nation!");
                     command = "k setkingdom " + p.getName() + " Vuurnatie";
+                    Bukkit.dispatchCommand(console, command);
+                    command = "lp user " + p.getName() + " parent add fire";
                     Bukkit.dispatchCommand(console, command);
 
                     if (bender == 3){
