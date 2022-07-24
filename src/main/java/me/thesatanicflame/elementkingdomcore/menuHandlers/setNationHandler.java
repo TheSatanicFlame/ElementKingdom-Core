@@ -10,7 +10,7 @@ import org.bukkit.event.inventory.InventoryClickEvent;
 
 public class setNationHandler implements Listener {
 
-    String elements[] = {"earth", "water", "air", "fire"};
+    String[] elements = {"earth", "water", "air", "fire"};
     @EventHandler
     public void onClick(InventoryClickEvent e){
         if (ChatColor.translateAlternateColorCodes('&', e.getView().getTitle()).equals(ChatColor.of("#121212").toString() + "Change the nation!") && e.getCurrentItem() != null){
