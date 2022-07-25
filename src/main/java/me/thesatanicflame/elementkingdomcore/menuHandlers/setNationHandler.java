@@ -65,7 +65,7 @@ public class setNationHandler implements Listener {
                         command = "lp user " + player.getName() + " parent remove " + element;
                         Bukkit.dispatchCommand(console, command);
                     }
-                    command = "k setkingdom " + target + " Vuurnatie";
+                    command = "k setkingdom " + target + " firenation";
                     Bukkit.dispatchCommand(console, command);
                     command = "tellraw " + target + " {\"text\":\"You've been migrated to the Fire Nation\",\"color\":\"red\"}";
                     Bukkit.dispatchCommand(console, command);

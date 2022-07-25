@@ -64,7 +64,7 @@ public class KingdomSorter implements Listener {
                 case 4:
                 case 7:
                     p.sendMessage(ChatColor.RED + "You've been sorted into the Fire Nation!");
-                    command = "k setkingdom " + p.getName() + " Vuurnatie";
+                    command = "k setkingdom " + p.getName() + " firenation";
                     Bukkit.dispatchCommand(console, command);
                     command = "lp user " + p.getName() + " parent add fire";
                     Bukkit.dispatchCommand(console, command);
